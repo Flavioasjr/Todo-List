@@ -1,6 +1,7 @@
 body {
     box-sizing: border-box;
     margin: 0;
+    font-family: sans-serif;
 }
 
 .container {
@@ -102,4 +103,68 @@ li {
 a {
     text-decoration: none;
     color: black;
+}
+
+.content {
+    padding: 36px 55px 0 55px;
+}
+
+.title-today {
+    display: inline;
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.date-today {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.icon-add {
+    color: #db4c3f;
+}
+
+.btn-form-add-task {
+    text-align: left;
+    padding: 0 0 8px;
+    color: grey;
+    font-size: 14px;
+    white-space: nowrap;
+    background: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-add-task {
+    display: none;
+}
+
+.task-today {
+    border-bottom: 1px solid #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-task {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.description-task {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #9ca3af;
+    font-size: 1rem;
+}
+
+.show{
+    display: block;
+}
+
+.hide {
+    display: none;
 }

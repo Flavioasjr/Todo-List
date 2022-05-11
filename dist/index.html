@@ -46,7 +46,7 @@
             </div>
 
             <div class="right-header">
-                <button class="btn-add-task btn-header-task">
+                <button class="btn-header-task">
                     <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24">
                         <g fill="none" fill-rule="evenodd" transform="translate(4 3)">
                             <mask id="jd4FBg" fill="#fff">
@@ -118,7 +118,7 @@
                                     2.75 0 0112 17.25z"></path>
                                 </g>
                             </svg></span>
-                        <span>Inbox</span>
+                        <span class="text-dashboard">Inbox</span>
                     </a>
                 </li>
                 <li>
@@ -140,7 +140,7 @@
                                     </text>
                                 </g>
                             </svg></span>
-                        <span>Today</span>
+                        <span class="text-dashboard">Today</span>
                     </a>
                 </li>
                 <li>
@@ -161,7 +161,7 @@
                                 </g>
                             </svg>
                         </span>
-                        <span>Upcoming</span>
+                        <span class="text-dashboard">Upcoming</span>
                     </a>
                 </li>
             </ul>
@@ -169,7 +169,20 @@
         </div>
 
         <div class="content">
-            <button class="btn btn-form-add-task">Add task</button>
+            <section id="today">
+                <h1 class="title-today">Today</h1>
+                <span class="date-today"></span>
+                <div class="task-list-today"></div>
+            </section>
+            <button class="btn btn-form-add-task">
+                <span class="icon-add">
+                    <svg width="13" height="13">
+                        <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" 
+                        fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </span>
+                Add task
+            </button>
             <form action="" method="post" class="form-add-task">
                 <ul>
                     <li>
@@ -182,7 +195,7 @@
                     </li>
                     <li>
                         <label for="date">Date:</label>
-                        <input type="text" id="date">
+                        <input type="date" id="date">
                     </li>
                     <li>
                         <label for="priority">Priority:</label>
@@ -193,7 +206,7 @@
                         <input type="text" id="notes">
                     </li>
                 </ul>
-                <button type="submit" class="btn-add-task">Add task</button>
+                <button  class="btn-add-task">Add task</button>
                 <button class="btn-cancel">Cancel</button>
             </form>
         </div>
