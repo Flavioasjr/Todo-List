@@ -70,6 +70,7 @@ body {
 
 .dashboard {
     background-color: #fafafa;
+    min-height: 92vh;
 }
 
 .list-dashboard {
@@ -109,7 +110,11 @@ a {
     padding: 36px 55px 0 55px;
 }
 
-.title-today {
+.today {
+    display: none;
+}
+
+.title-today, .title-inbox {
     display: inline;
     margin-top: 0;
     font-size: 1.4rem;
@@ -154,12 +159,16 @@ a {
     font-weight: 100;
 }
 
-.description-task {
-    margin-top: 0;
+.task-information {
     margin-bottom: 10px;
-    color: #9ca3af;
-    font-size: 1rem;
 }
+
+.description-task, .task-date {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
 
 .show{
     display: block;

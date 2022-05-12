@@ -2,7 +2,6 @@ export default function removeTask() {
     const buttonsRemove = document.querySelectorAll('.remove-task');
 
     const storageTasks = JSON.parse(localStorage.getItem('tasks'));
-    console.log(storageTasks);
     
     for(let button of buttonsRemove) {
         button.addEventListener('click', e => {
