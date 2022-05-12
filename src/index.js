@@ -7,12 +7,14 @@ import showFormAddTask from './showFormAddTask';
 import removeTask from './removeTask';
 import dashboard from './dashboard';
 import showTasksInbox from './showTasksInbox';
+import showTaskInformation from './showTaskInformation';
 
 
 showTasksToday();
 showTasksInbox();
 removeTask();
 dashboard();
+showTaskInformation();
 
 const btnAddTask = document.querySelector('.btn-add-task');
 const btnFormAddTask = document.querySelector('.btn-form-add-task');

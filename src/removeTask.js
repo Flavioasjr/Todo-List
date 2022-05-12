@@ -7,12 +7,13 @@ export default function removeTask() {
         button.addEventListener('click', e => {
             e.preventDefault();
             const indexTask = Number(e.target.dataset.task);
-            storageTasks.splice(indexTask, 1);
+            console.log(e);
+            // storageTasks.splice(indexTask, 1);
             
-            localStorage.removeItem('tasks');
-            localStorage.setItem('tasks', JSON.stringify(storageTasks));
+            // localStorage.removeItem('tasks');
+            // localStorage.setItem('tasks', JSON.stringify(storageTasks));
 
-            location.reload();
+            // location.reload();
         });
     }
 }

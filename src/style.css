@@ -146,11 +146,12 @@ a {
     display: none;
 }
 
-.task-today {
+.task {
     border-bottom: 1px solid #d1d5db;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .title-task {
@@ -169,6 +170,31 @@ a {
     font-size: 0.9rem;
 }
 
+.box-task-information {
+    position: fixed;
+    width: 602px;
+    height: 532px;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+    display: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 2px;
+    padding: 20px 24px;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-inbox-box {
+    display: flex;
+    gap: 10px;
+}
 
 .show{
     display: block;
