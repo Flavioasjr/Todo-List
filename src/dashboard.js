@@ -1,6 +1,7 @@
 import showTasksToday from './showTasksToday';
 import showTasksInbox from './showTasksInbox';
 import removeTask from './removeTask';
+import showTaskInformation from './showTaskInformation';
 
 export default function dashboard() {
     const linkInbox = document.querySelector('.link-inbox');
@@ -16,6 +17,7 @@ export default function dashboard() {
 
         showTasksInbox();
         removeTask();
+        showTaskInformation();
     });
 
     linkToday.addEventListener('click', e => {
@@ -28,5 +30,6 @@ export default function dashboard() {
 
         showTasksToday();
         removeTask();
+        showTaskInformation();
     });
 }
