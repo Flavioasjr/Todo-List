@@ -29,7 +29,11 @@ export default function showTasks() {
         p[i].classList.add('description-task');
         button[i].classList.add('remove-task');
 
-        h3[i].textContent = storageTasks[i].title;
+        if(storageTasks[i].priority) {
+            h3[i].innerHTML += '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="16" height="16" viewBox="0 2 20 20"><path d="M10 3H14V14H10V3M10 21V17H14V21H10Z" fill="#db4c3f"/></svg>'
+        }    
+
+        h3[i].innerHTML += storageTasks[i].title;
         p[i].textContent = storageTasks[i].description;
         button[i].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -3 24 24" width="24" height="24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><rect width="14" height="1" x="5" y="6" fill="currentColor" rx=".5"></rect><path fill="currentColor" d="M10 9h1v8h-1V9zm3 0h1v8h-1V9z"></path><path stroke="currentColor" d="M17.5 6.5h-11V18A1.5 1.5 0 0 0 8 19.5h8a1.5 1.5 0 0 0 1.5-1.5V6.5zm-9 0h7V5A1.5 1.5 0 0 0 14 3.5h-4A1.5 1.5 0 0 0 8.5 5v1.5z"></path></g></svg>';
         button[i].dataset.task = i;

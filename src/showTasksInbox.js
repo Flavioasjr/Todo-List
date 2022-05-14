@@ -28,8 +28,12 @@ export default function showTasksInbox() {
         divDate[i].classList.add('task-date');
         button[i].classList.add('remove-task');
 
+        if(storageTasks[i].priority) {
+            h3[i].innerHTML += '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="16" height="16" viewBox="0 2 20 20"><path d="M10 3H14V14H10V3M10 21V17H14V21H10Z" fill="#db4c3f"/></svg>'
+        }    
+
         div[i].href = '#';
-        h3[i].textContent = storageTasks[i].title;
+        h3[i].innerHTML += storageTasks[i].title;
         p[i].textContent = storageTasks[i].description;
         divDate[i].innerHTML += '<svg width="14" height="14" viewBox="0 -1 12 12" class="calendar_icon"><path fill="currentColor" fill-rule="nonzero" d="M9.5 1A1.5 1.5 0 0 1 11 2.5v7A1.5 1.5 0 0 1 9.5 11h-7A1.5 1.5 0 0 1 1 9.5v-7A1.5 1.5 0 0 1 2.5 1h7zm0 1h-7a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5zM8 7.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zM8.5 4a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z"></path></svg>';
         divDate[i].innerHTML += format(new Date(storageTasks[i].dueDate), 'MMM dd yy');

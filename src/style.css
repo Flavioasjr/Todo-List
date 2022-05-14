@@ -23,7 +23,7 @@ body {
     display: flex;
 }
 
-.btn-show-menu, .btn-home, .btn-header-task,
+.btn-show-menu, .btn-home, .btn-header-add-task,
 .btn-productivity, .btn-help, .btn-notifications {
     background-color: #db4c3f;
     border: none;
@@ -170,6 +170,40 @@ label {
     gap: 20px;
 }
 
+.item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item-form-priority {
+    display: flex;
+    gap: 5px;
+}
+
+#title, #description, #date {
+    height: 20px;
+    border-radius: 5px;
+    border: solid 1px #d1d5db;
+    padding: 2px 5px;
+}
+
+#description:focus, #title:focus {
+    outline: none;
+    border: 1px solid #db4c3f;
+    box-shadow: 0px 2px 5px 1px #db4c3f; 
+}
+
+#date:focus, #notes:focus {
+    outline: none;
+}
+
+#notes {
+    border-radius: 5px;
+    border: solid 1px #d1d5db;
+    padding: 8px 5px;
+}
+
 .task {
     border-bottom: 1px solid #d1d5db;
     display: flex;
@@ -182,6 +216,8 @@ label {
     margin-bottom: 0;
     font-size: 1rem;
     font-weight: 100;
+    display: flex;
+    align-items: center;
 }
 
 .task-information {
@@ -238,9 +274,10 @@ label {
     height: 100vh;
     width: 100vw;
     display: none;
+    z-index: 1;
 }
 
-.button-note {
+.button-note, .btn-add-task, .btn-cancel {
     position: fixed;
     top: 281px;
     right: 45px;
@@ -252,6 +289,16 @@ label {
     font-weight: 700;
     border-radius: 5px;
     padding: 10px;
+}
+
+.btn-add-task, .btn-cancel {
+    position: static;
+    margin-right: 10px;
+}
+
+.btn-cancel {
+    background-color: white;
+    color: #db4c3f;
 }
 
 .edit-notes {
@@ -268,11 +315,23 @@ label {
 .title-task-information {
     margin-bottom: 0;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .description-task-information, .task-date-information {
     margin: 0;
     font-size: 0.9rem;
+}
+
+.task-priority-information {
+    text-transform: uppercase;
+    color: #db4c3f;
+    display: none;
+}
+
+.container-hide-dashboard {
+    grid-template-columns: 1fr;
 }
 
 .show{
