@@ -114,6 +114,13 @@ a {
     display: none;
 }
 
+.header-inbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5px;
+}
+
 .title-today, .title-inbox {
     display: inline;
     margin-top: 0;
@@ -129,7 +136,7 @@ a {
     color: #db4c3f;
 }
 
-.btn-form-add-task {
+.btn-form-add-task, .btn-view {
     text-align: left;
     padding: 0 0 8px;
     color: grey;
@@ -140,6 +147,11 @@ a {
     border: none;
     cursor: pointer;
     margin-top: 10px;
+}
+
+.btn-view {
+    display: flex;
+    align-items: center;
 }
 
 .form-add-task {
@@ -230,9 +242,18 @@ label {
     font-size: 0.9rem;
 }
 
+.late-task {
+    color: #db4c3f;
+}
+
+.current-task {
+    color: #058527;
+}
+
 .remove-task {
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .box-task-information {
@@ -279,7 +300,7 @@ label {
 
 .button-note, .btn-add-task, .btn-cancel {
     position: fixed;
-    top: 281px;
+    top: 291px;
     right: 45px;
     background-color: #db4c3f;
     color: white;
@@ -289,6 +310,10 @@ label {
     font-weight: 700;
     border-radius: 5px;
     padding: 10px;
+}
+
+.position-btn-priority {
+    top: 330px;
 }
 
 .btn-add-task, .btn-cancel {

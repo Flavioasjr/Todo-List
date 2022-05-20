@@ -1,10 +1,11 @@
-import { format } from 'date-fns';
+import { format, compareAsc } from 'date-fns';
 
 export default function showTaskInformation() {
   const taskInformation = document.querySelector('.show-task-information');
   const boxTaskInformation = document.querySelector('.box-task-information');
   const tasks = document.querySelectorAll('.task');
   const darkBackground = document.querySelector('.dark-background');
+  const date = format(new Date(), 'MM dd yy');
 
   const storageTasks = JSON.parse(localStorage.getItem('tasks'));
 
@@ -40,9 +41,21 @@ export default function showTaskInformation() {
 
       textArea.rows = '10';
 
+      const dateTask = format(new Date(storageTasks[indexTask].dueDate), 'MM dd yy');
+      const compareDates = compareAsc(new Date(dateTask), new Date(date));
+
+      if (compareDates === -1) {
+        divDate.classList.add('late-task');
+      }
+
+      if (compareDates === 0) {
+        divDate.classList.add('current-task');
+      }
+
       if (storageTasks[indexTask].priority) {
         h3.innerHTML += '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M10 3H14V14H10V3M10 21V17H14V21H10Z" fill="#db4c3f"/></svg>';
         divPriority.classList.add('show');
+        buttonNote.classList.add('position-btn-priority');
       }
 
       h3.innerHTML += storageTasks[indexTask].title;
