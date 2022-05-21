@@ -114,6 +114,10 @@ a {
     display: none;
 }
 
+.header-today {
+    padding: 13px 0;
+}
+
 .header-inbox {
     display: flex;
     justify-content: space-between;

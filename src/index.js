@@ -1,4 +1,5 @@
 /* eslint-disable no-restricted-globals */
+import './calendarStyle.css';
 import './style.css';
 import Task from './task';
 import formTask from './formTask';
@@ -10,6 +11,7 @@ import dashboard from './dashboard';
 import showTasksInbox from './showTasksInbox';
 import showTaskInformation from './showTaskInformation';
 import header from './header';
+import showCalendar from './showCalendar';
 
 showTasksToday();
 showTasksInbox();
@@ -17,6 +19,7 @@ removeTask();
 dashboard();
 showTaskInformation();
 header();
+showCalendar();
 
 const btnAddTask = document.querySelector('.btn-add-task');
 const btnFormAddTask = document.querySelector('.btn-form-add-task');
