@@ -16,21 +16,27 @@ body {
     justify-content: space-between;
     padding: 10px 40px;
     grid-column: 1 / 3;
+    align-items: center;
 }
 
 .left-header, .right-header{
     gap: 10px;
     display: flex;
+    align-items: center;
 }
 
 .btn-show-menu, .btn-home, .btn-header-add-task,
-.btn-productivity, .btn-help, .btn-notifications {
+.btn-login, .btn-logout, .btn-notifications {
     background-color: #db4c3f;
     border: none;
     cursor: pointer;
     height: 28px;
     min-width: 28px;
     padding: 0;
+}
+
+.btn-login, .btn-logout {
+    width: 50px;
 }
 
 .icon-menu {
@@ -197,6 +203,12 @@ label {
     gap: 5px;
 }
 
+.error-message-saving-task {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: red;
+}
+
 #title, #description, #date {
     height: 20px;
     border-radius: 5px;
@@ -316,6 +328,11 @@ label {
     padding: 10px;
 }
 
+.btn-add-task:disabled {
+    background-color: #db4c3fa3;
+    cursor: auto;
+}
+
 .position-btn-priority {
     top: 330px;
 }
@@ -361,6 +378,19 @@ label {
 
 .container-hide-dashboard {
     grid-template-columns: 1fr;
+}
+
+.user-photo {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    border-radius: 20px;
+    display: none;
+}
+
+.user-name {
+    display: none;
 }
 
 .show{

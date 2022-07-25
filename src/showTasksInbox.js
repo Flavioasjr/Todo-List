@@ -1,8 +1,9 @@
 import showTasks from './showTasks';
 
-export default function showTasksInbox() {
+export default function showTasksInbox(tasks) {
+  if (!tasks) return;
   const taskInbox = document.querySelector('.task-list-inbox');
-  const div = showTasks();
+  const div = showTasks(tasks);
 
   taskInbox.textContent = '';
 
