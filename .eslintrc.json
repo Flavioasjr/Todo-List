@@ -12,6 +12,8 @@
     },
     "rules": {
         "no-console": "off",
-        "no-restricted-globals": ["error", "event", "fdescribe"]
+        "no-restricted-globals": ["error", "event", "fdescribe"],
+        "import/prefer-default-export": 0,
+        "import/no-cycle": 0
     }
 }

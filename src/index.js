@@ -1,48 +1,71 @@
 /* eslint-disable no-restricted-globals */
-import './calendarStyle.css';
 import './style.css';
-import Task from './task';
-import formTask from './formTask';
-import saveTasks from './saveTasks';
-import showTasksToday from './showTasksToday';
-import showFormAddTask from './showFormAddTask';
-import removeTask from './removeTask';
-import dashboard from './dashboard';
-import showTasksInbox from './showTasksInbox';
-import showTaskInformation from './showTaskInformation';
-import header from './header';
-import showCalendar from './showCalendar';
+import { initializeApp } from 'firebase/app';
+import {
+  getAuth,
+  onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+} from 'firebase/auth';
+import {
+  addDoc, collection, getFirestore, serverTimestamp,
+} from 'firebase/firestore';
+import app from './app';
+import authStateObserver from './firebaseFiles/authStateObserver';
 
-showTasksToday();
-showTasksInbox();
-removeTask();
-dashboard();
-showTaskInformation();
-header();
-showCalendar();
+const firebaseConfig = {
+  apiKey: 'AIzaSyAytzaEBk77GYZi6tC4fG-pIGMHxR-uyAs',
+  authDomain: 'todo-list-9f9f1.firebaseapp.com',
+  projectId: 'todo-list-9f9f1',
+  storageBucket: 'todo-list-9f9f1.appspot.com',
+  messagingSenderId: '483150612603',
+  appId: '1:483150612603:web:a31102d99a6147e0ae3ade',
+};
 
-const btnAddTask = document.querySelector('.btn-add-task');
-const btnFormAddTask = document.querySelector('.btn-form-add-task');
+export async function signIn() {
+  const provider = new GoogleAuthProvider();
+  await signInWithPopup(getAuth(), provider);
+}
 
-btnFormAddTask.addEventListener('click', (e) => {
-  e.preventDefault();
-  showFormAddTask();
-});
+export function signOutUser() {
+  signOut(getAuth());
+}
 
-btnAddTask.addEventListener('click', (e) => {
-  e.preventDefault();
-  const taskContent = formTask();
+function initFirebaseAuth() {
+  onAuthStateChanged(getAuth(), authStateObserver);
+}
 
-  if (!taskContent) return;
-  const task = new Task(
-    taskContent[0],
-    taskContent[1],
-    taskContent[2],
-    taskContent[3],
-    taskContent[4],
-  );
+function getUserName() {
+  return getAuth().currentUser.displayName;
+}
 
-  saveTasks(task);
+export function isUserSignedIn() {
+  return !!getAuth().currentUser;
+}
 
-  location.reload();
-});
+export async function saveTask(task) {
+  if (!getAuth().currentUser) return;
+  try {
+    await addDoc(collection(getFirestore(), getAuth().currentUser.uid), {
+      name: getUserName(),
+      task: {
+        title: task.title,
+        description: task.description,
+        dueDate: task.dueDate,
+        priority: task.priority,
+        notes: task.notes,
+        taskId: task.taskId,
+      },
+      timestamp: serverTimestamp(),
+    });
+  } catch (error) {
+    console.log('Erros writing new task to Firebase Database', error);
+  }
+}
+
+app();
+
+initializeApp(firebaseConfig);
+
+initFirebaseAuth();
