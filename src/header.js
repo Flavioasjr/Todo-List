@@ -4,6 +4,7 @@ export default function header() {
   const btnHome = document.querySelector('.btn-home');
   const btnShowMenu = document.querySelector('.btn-show-menu');
   const btnHeaderAddTask = document.querySelector('.btn-header-add-task');
+  const btnNotifications = document.querySelector('.btn-notifications');
 
   btnHome.addEventListener('click', () => {
     location.reload();
@@ -31,5 +32,16 @@ export default function header() {
     e.preventDefault();
 
     showFormAddTask();
+  });
+
+  btnNotifications.addEventListener('click', (e) => {
+    e.preventDefault();
+    const btnFormAddTask = document.querySelector('.btn-form-add-task');
+    const inbox = document.querySelector('.inbox');
+    const today = document.querySelector('.today');
+
+    inbox.classList.add('hide');
+    today.classList.add('show');
+    btnFormAddTask.classList.remove('hide');
   });
 }

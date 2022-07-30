@@ -1,5 +1,4 @@
 /* eslint-disable no-restricted-globals */
-import './calendarStyle.css';
 import './style.css';
 import { initializeApp } from 'firebase/app';
 import {
@@ -30,7 +29,6 @@ export async function signIn() {
 }
 
 export function signOutUser() {
-  console.log(getAuth().currentUser.uid);
   signOut(getAuth());
 }
 
@@ -48,7 +46,6 @@ export function isUserSignedIn() {
 
 export async function saveTask(task) {
   if (!getAuth().currentUser) return;
-  console.log('saveTask');
   try {
     await addDoc(collection(getFirestore(), getAuth().currentUser.uid), {
       name: getUserName(),
@@ -58,6 +55,7 @@ export async function saveTask(task) {
         dueDate: task.dueDate,
         priority: task.priority,
         notes: task.notes,
+        taskId: task.taskId,
       },
       timestamp: serverTimestamp(),
     });

@@ -98,18 +98,7 @@
                         00-.294-.315l-5.407-5.273c-.425-.414-.604-.545-.798-.615l-.06-.019z"></path>
                     </svg>
                 </button>
-
-                <div class="find">
-                    <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        aria-hidden="true" class="search_icon">
-                        <path d="M10.5 3a7.5 7.5 0 015.645 12.438l4.709 4.708a.502.502 0 01-.708.708l-4.708-4.709A7.5 7.5 
-                        0 1110.5 3zm0 1a6.5 6.5 0 100 13 6.5 6.5 0 000-13z" fill="currentColor"></path>
-                    </svg>
-                    <input type="text" class="input-header" placeholder="Search">
-                </div>
-            </div>
-
-            <div class="right-header">
+                
                 <button class="btn-header-add-task">
                     <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24">
                         <g fill="none" fill-rule="evenodd" transform="translate(4 3)">
@@ -124,6 +113,9 @@
                         </g>
                     </svg>
                 </button>
+            </div>
+
+            <div class="right-header">
                 <div class="user-photo"></div>
                 <div class="user-name"></div>
                 <button class="btn-login">
@@ -134,9 +126,17 @@
                     </svg>
                 </button>
                 <button class="btn-logout">
-                    <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M14.08,15.59L16.67,13H7V11H16.67L14.08,8.41L15.5,7L20.5,12L15.5,17L14.08,15.59M19,3A2,2 0 0,1 21,5V9.67L19,7.67V5H5V19H19V16.33L21,14.33V19A2,2 
-                    0 0,1 19,21H5C3.89,21 3,20.1 3,19V5C3,3.89 3.89,3 5,3H19Z" fill="currentColor" />
+                    <svg class="icon-menu icon-logout" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384.971 384.971"
+                        style="enable-background:new 0 0 384.971 384.971;" xml:space="preserve">
+                        <g id="Sign_Out">
+                            <path d="M180.455,360.91H24.061V24.061h156.394c6.641,0,12.03-5.39,12.03-12.03s-5.39-12.03-12.03-12.03H12.03
+			                    C5.39,0.001,0,5.39,0,12.031V372.94c0,6.641,5.39,12.03,12.03,12.03h168.424c6.641,0,12.03-5.39,12.03-12.03
+			                    C192.485,366.299,187.095,360.91,180.455,360.91z" fill="currentColor" />
+                            <path d="M381.481,184.088l-83.009-84.2c-4.704-4.752-12.319-4.74-17.011,0c-4.704,4.74-4.704,12.439,0,17.179l62.558,63.46H96.279
+			                    c-6.641,0-12.03,5.438-12.03,12.151c0,6.713,5.39,12.151,12.03,12.151h247.74l-62.558,63.46c-4.704,4.752-4.704,12.439,0,17.179
+			                c4.704,4.752,12.319,4.752,17.011,0l82.997-84.2C386.113,196.588,386.161,188.756,381.481,184.088z" fill="currentColor" />
+                    </g>
                     </svg>
                 </button>
                 <button class="btn-notifications">
@@ -148,6 +148,7 @@
                         8.476a.5.5 0 00.418.774h13.05a.5.5 0 00.418-.774c-1.462-2.227-2.193-5.053-2.193-8.476A4.75 4.75 0 0012 4z"
                             fill="currentColor" fill-rule="nonzero"></path>
                     </svg>
+                    <div class="task-notifications"></div>
                 </button>
             </div>
         </div>
@@ -193,26 +194,6 @@
                         <span class="text-dashboard">Today</span>
                     </a>
                 </li>
-                <li>
-                    <a href="" class="link-upcoming">
-                        <span class="svg-dashboard">
-                            <svg class="icon-upcoming" width="24" height="24" viewBox="0 -4 24 24"
-                                xmlns="http://www.w3.org/2000/svg" class="SWWJ2mDmoJ5jpYGsCY5nBA==">
-                                <g fill="currentColor" fill-rule="nonzero">
-                                    <path d="M6 4.5h12A1.5 1.5 0 0119.5 6v2.5h-15V6A1.5 1.5 0 016 4.5z" opacity="0.1">
-                                    </path>
-                                    <path d="M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2zm0 1a1 1 0 
-                                        00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V6a1 1 0 00-1-1H6zm10 12a1 1 0 110-2 1 1 0 
-                                        010 2zm-4 0a1 1 0 110-2 1 1 0 010 2zm-4 0a1 1 0 110-2 1 1 0 010 2zm8-4a1 1 0 
-                                        110-2 1 1 0 010 2zm-4 0a1 1 0 110-2 1 1 0 010 2zm-4 0a1 1 0 110-2 1 1 0 010 2zM7 
-                                        8h10a.5.5 0 110 1H7a.5.5 0 010-1z">
-                                    </path>
-                                </g>
-                            </svg>
-                        </span>
-                        <span class="text-dashboard">Upcoming</span>
-                    </a>
-                </li>
             </ul>
 
         </div>
@@ -231,29 +212,6 @@
                     <div>
                         <h1 class="title-inbox">Inbox</h1>
                     </div>
-                    <button class="btn-view">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path
-                                d="M15 14.5a2 2 0 011.936 1.498L19.5 16a.5.5 0 010 1l-2.563.001a2.001 2.001 
-                            0 01-3.874 0L4.5 17a.5.5 0 010-1l8.564-.002A2 2 0 0115 14.5zm-.982 1.81l.005-.025-.005.026-.003.014-.004.025-.007.061A.897.897 
-                            0 0014 16.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 
-                            1 0 001.784-.155l.015-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06A.877.877 
-                            0 0016 16.5l-.008-.124-.007-.051-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026a.998.998 
-                            0 00-1.843.043l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047zM9 9.5a2 2 0 011.936 1.498L19.5 11a.5.5 0 010 1l-8.563.001a2.001 2.001 
-                            0 01-3.874 0L4.5 12a.5.5 0 010-1l2.564-.002A2 2 0 019 9.5zm0 1a.998.998 0 00-.93.634l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047.005-.025-.005.026-.003.014-.004.025-.007.061C8 
-                            11.441 8 11.471 8 11.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 
-                            1 0 001.784-.155l.015-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06A.877.877 0 0010 
-                            11.5l-.008-.124-.007-.051-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026A1.002 1.002 
-                            0 009 10.5zm6-6a2 2 0 011.936 1.498L19.5 6a.5.5 0 010 1l-2.563.001a2.001 2.001 0 01-3.874 0L4.5 7a.5.5 0 010-1l8.564-.002A2 2 0 0115 4.5zm0 
-                            1a.998.998 0 00-.93.634l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047.005-.025-.005.026-.003.014-.004.025-.007.061C14 6.441 
-                            14 6.471 14 6.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 
-                            1 0 001.784-.155l.015-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06C16 6.557 16 6.528 16 
-                            6.5l-.008-.124-.007-.051-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026A1.002 1.002 0 0015 5.5z"
-                                fill="currentColor" fill-rule="nonzero"></path>
-                        </svg>
-                        View
-                    </button>
-
                 </div>
                 <div class="task-list-inbox"></div>
 
@@ -269,57 +227,6 @@
                 </span>
                 Add task
             </button>
-            <section class="upcoming upcoming-hide">
-                <div class="calendar">
-                    <div class="calendar__header">
-                        <h2 class="month-year"></h2>
-                    </div>
-                    <div class="calendar__date">
-                        <div class="calendar__day">M</div>
-                        <div class="calendar__day">T</div>
-                        <div class="calendar__day">W</div>
-                        <div class="calendar__day">T</div>
-                        <div class="calendar__day">F</div>
-                        <div class="calendar__day">S</div>
-                        <div class="calendar__day">S</div>
-                        <div class="calendar__number" data-numberDay="1"></div>
-                        <div class="calendar__number" data-numberDay="2"></div>
-                        <div class="calendar__number" data-numberDay="3"></div>
-                        <div class="calendar__number" data-numberDay="4"></div>
-                        <div class="calendar__number" data-numberDay="5"></div>
-                        <div class="calendar__number" data-numberDay="6"></div>
-                        <div class="calendar__number" data-numberDay="7"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number calendar__number--current"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                        <div class="calendar__number"></div>
-                    </div>
-                </div>
-            </section>
         </div>
 
     </div>

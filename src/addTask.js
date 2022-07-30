@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import { saveTask } from '.';
 import formTask from './formTask';
 import Task from './task';
@@ -12,6 +13,7 @@ export default function addTask() {
   const inputNotes = document.querySelector('#notes');
 
   const taskContent = formTask();
+  const taskId = nanoid();
 
   if (!taskContent) return;
   const task = new Task(
@@ -20,13 +22,14 @@ export default function addTask() {
     taskContent[2],
     taskContent[3],
     taskContent[4],
+    taskId,
   );
 
   darkBackground.classList.remove('show');
   formAddTask.classList.remove('show');
 
   saveTask(task);
-  console.log('add');
+
   inputTitle.value = '';
   inputDescription.value = '';
   inputDate.value = '';

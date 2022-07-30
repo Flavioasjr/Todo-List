@@ -35,6 +35,10 @@ body {
     padding: 0;
 }
 
+.btn-notifications {
+    position: relative;
+}
+
 .btn-login, .btn-logout {
     width: 50px;
 }
@@ -125,10 +129,7 @@ a {
 }
 
 .header-inbox {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 5px;
+    padding-bottom: 15px;
 }
 
 .title-today, .title-inbox {
@@ -316,7 +317,7 @@ label {
 
 .button-note, .btn-add-task, .btn-cancel {
     position: fixed;
-    top: 291px;
+    top: 282px;
     right: 45px;
     background-color: #db4c3f;
     color: white;
@@ -334,7 +335,7 @@ label {
 }
 
 .position-btn-priority {
-    top: 330px;
+    top: 320px;
 }
 
 .btn-add-task, .btn-cancel {
@@ -387,6 +388,20 @@ label {
     background-size: 30px;
     border-radius: 20px;
     display: none;
+}
+
+.task-notifications {
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    background: #99f6e4;
+}
+
+.icon-logout {
+    height: 21px;
 }
 
 .user-name {

@@ -5,7 +5,6 @@ import removeTask from './removeTask';
 import dashboard from './dashboard';
 import showTaskInformation from './showTaskInformation';
 import header from './header';
-import showCalendar from './showCalendar';
 import login from './firebaseFiles/login';
 import logout from './firebaseFiles/logout';
 import addTask from './addTask';
@@ -15,7 +14,6 @@ export default function app() {
   dashboard();
   showTaskInformation();
   header();
-  showCalendar();
   login();
   logout();
 
